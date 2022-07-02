@@ -98,6 +98,7 @@ img {
 }
 
 .row {
+	align-items:center;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
