@@ -45,9 +45,9 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Corner Stone</a></h1>
+        
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1>  <a href="index.html"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  Corner Stone</a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -204,7 +204,7 @@
           <div class="col-md-4 col-lg-12">
             <div class="team-member fullborder">
               <div class="photo">
-              <img src="assets/img/iqk.jpg" class="img-fluid" alt="Shabaz Bazi Kiyani ">
+              <img src="assets/img/ikhlaq.jpg" class="img-fluid" alt="Shabaz Bazi Kiyani ">
               </div>          
               <h3>Shabaz Bazi Kiyani </h3>
               <h5>CEO</h5>
@@ -228,7 +228,7 @@ Having 7 and half year experience in call center industry and also having experi
           <div class="col-md-4 col-lg-12">
             <div class="team-member fullborder">
               <div class="photo">
-              <img src="assets/img/ikhlaq.jpg" class="img-fluid" alt="ikhlaq hussain ">
+              <img src="assets/img/iqk.jpg" class="img-fluid" alt="ikhlaq hussain ">
               </div>          
               <h3>Ikhlaq hussain </h3>
               <hr>
@@ -464,7 +464,7 @@ Having 7 and half year experience in call center industry and also having experi
           </div>
 
           <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://script.google.com/macros/s/AKfycbzVX_eGk2sjjgeEpkG7_u6qgLhxk5t4MUZ6_qxkssIbyV1GEk5TrZgdAGkDIKpuGEoJAA/exec"  method="POST" onsubmit="reset()" role="form" class="php-email-fom">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
               </div>
@@ -482,7 +482,7 @@ Having 7 and half year experience in call center industry and also having experi
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" name="submit">Send Message</button></div>
             </form>
           </div>
 
@@ -528,6 +528,18 @@ Having 7 and half year experience in call center industry and also having experi
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbzVX_eGk2sjjgeEpkG7_u6qgLhxk5t4MUZ6_qxkssIbyV1GEk5TrZgdAGkDIKpuGEoJAA/exec'
+			const form = document.forms['Contact Form']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
 
 </body>
 
